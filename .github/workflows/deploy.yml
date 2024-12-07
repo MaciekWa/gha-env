@@ -9,7 +9,8 @@ env:
 jobs:
   test:
     env:
-      MONGODB_CLUSTER_ADDRESS: cluster0.z1l2m.mongodb.net
+#      MONGODB_CLUSTER_ADDRESS: cluster0.z1l2m.mongodb.net
+      MONGODB_CLUSTER_ADDRESS: mongodb+srv://MongoDataBaseMW:${{env.MONGODB_PASSWORD}}@cluster0.z1l2m.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
       MONGODB_USERNAME: tt8950332@gmail.com
       MONGODB_PASSWORD: zaq1@WSX
       PORT: 8080
