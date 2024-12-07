@@ -9,8 +9,8 @@ env:
 jobs:
   test:
     env:
-#      MONGODB_CLUSTER_ADDRESS: cluster0.z1l2m.mongodb.net
-      MONGODB_CLUSTER_ADDRESS: mongodb+srv://MongoDataBaseMW:zaq1@WSX@cluster0.z1l2m.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      MONGODB_CLUSTER_ADDRESS: cluster0.z1l2m.mongodb.net
+#      MONGODB_CLUSTER_ADDRESS: mongodb+srv://MongoDataBaseMW:zaq1@WSX@cluster0.z1l2m.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
       MONGODB_USERNAME: tt8950332@gmail.com
       MONGODB_PASSWORD: zaq1@WSX
       PORT: 8080
@@ -27,7 +27,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Run server
-        run: npm start & npx wait-on http://127.0.0.1:$PORT
+        run: npm start & npx wait-on http://127.0.0.1
       - name: Run tests
         run: npm test
       - name: Output information
